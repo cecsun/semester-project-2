@@ -5,3 +5,8 @@ export function addToLocalStorage(key, value) {
 export function getFromLocalStorage(key) {
     return localStorage.getItem(key);
 }
+
+export function logout() {
+    localStorage.removeItem('accessToken');
+    window.location.href = '/login/index.html';
+}
