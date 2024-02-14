@@ -12,41 +12,55 @@
     <script type="module" src="/js/search.js"></script>
     <script type="module" src="/js/logout.js"></script>
 </head>
-<body>
+<body class="">
 
-    <header>
-        <div class="container">
-            <div><a class="navbar-brand" href="/">Auction House</a></div>
-            <nav class="page-nav">
-                <ul class="page-nav-list">
-                    <li><a href="/profile/index.html">Profile</a></li>
-                    <li><a id="logout-button" href="/login/index.html">Log out</a></li>
-                </ul>
-                <form class="d-flex" role="search" id="search-form" name="search-form">
-                    <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn" id="search-submit" type="submit">Search</button>
-                </form>
-            </nav>
-        </div>
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/listings/index.html">Auction House</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/profile/index.html">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" id="logout-button" href="/login/index.html">Log out</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search" id="search-form" name="search-form">
+                        <input class="form-control me-2" name="search" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" id="search-submit" type="submit">Search</button>
+                    </form>
+                <!-- </div> -->
+            </div>
+        </nav>
     </header>
 
-    <main>
-      <div class="container">
-        <div id="display-listings">
-            <!-- <div class="listing-wrapper">
-                <div class="listing-container">
-                    <h2>Hei</h2>
-                    <div><img src="https://shorturl.at/c1zF0" alt="Title" class="listing-image"/></div>
-                    <p>Text</p>
-                    <button>Bid</button>
-                </div>
-            </div> -->
+    <main class="flex-grow-1 bg-dark text-light">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6" id="display-listings">
+                <!-- <div class="listing-wrapper">
+                    <div class="listing-container">
+                        <h2>Hei</h2>
+                        <div><img src="https://shorturl.at/c1zF0" alt="Title" class="listing-image"/></div>
+                        <p>Text</p>
+                        <button>Bid</button>
+                    </div>
+                </div> -->
+            </div>
         </div>
       </div>
     </main>
 
-    <footer>
-        <div class="container">
+    <footer class="d-flex bg-dark text-light pt-5 pb-3">
+        <div class="container-fluid">
             <p>&copy; 2024 Auction House</p>
         </div>
     </footer>
