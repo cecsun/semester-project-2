@@ -1,6 +1,6 @@
 import { generateListingHtml } from "../../utils/generateListingHtml.js";
 
-const listingsContainer = document.querySelector('#display-listings');
+const listingsContainer = document.getElementById('display-listings');
 
 function sortCallback(a, b) {
     if (a.title < b.title) {
@@ -13,7 +13,7 @@ function sortCallback(a, b) {
   }
 
 export async function displayListings(listings, filterCallback, isAuthorized = false) {
-    listingsContainer.textContent = '';
+    listingsContainer.innerHTML = '';
     listings
     .filter(filterCallback)
     .sort(sortCallback)
