@@ -1,5 +1,6 @@
-import { displayListings } from "/js/api/listings/listings.js";
 import { getListings } from "/js/api/listings/storage.mjs";
+import { displayListings } from "/js/api/listings/listings.js";
+
 
 const viewListings = document.getElementById('display-listings');
 
