@@ -8,24 +8,79 @@
     <link rel="stylesheet" href="/dist/css/styles.css">
     <script type="module" src="/js/api/profile/profile.js"></script>
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="/js/index.mjs" type="module"></script> -->
+    <script type="module" src="/js/search.js"></script>
+    <script type="module" src="/js/logout.js"></script>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div><a class="navbar-brand" href="/">Auction House</a></div>
-            <nav class="page-nav">
-                <ul class="page-nav-list">
-                    <li><a href="/listings/index.html">Listings</a></li>
-                    <li><a id="logout-button" href="/login/index.html">Log out</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/listings/index.html">Auction House</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/listings/index.html">Listings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" id="logout-button" href="/login/index.html">Log out</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search" id="search-form" name="search-form">
+                        <input class="form-control me-2" name="search" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" id="search-submit" type="submit">Search</button>
+                    </form>
+                <!-- </div> -->
+            </div>
+        </nav>
     </header>
 
     <main>
-      
+        <div class="text-center pt-5 pb-3 text-dark text-uppercase">
+            <h1 id="username">Username</h1>
+        </div>
+        <!-- <div class="d-flex justify-content-center p-4">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" class="img-fluid" alt="profile image" style="border-radius: 50%; height: 200px;">
+        </div> -->
+        <div class="d-flex justify-content-center p-4">
+            <div class="avatar">
+              <img id="avatar-image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" class="avatar-image rounded-circle" alt="Profile image" style="height: 200px;"/>
+            </div>
+          </div>
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+                <div class="col-6 px-4">
+                <p class="text-dark h3 m-0 d-flex justify-content-center" id="total-credits">975</p>
+                <p class="text-dark">Total Credits</p>
+                </div>
+                <!-- <div class="col-6 px-4">
+                <p class="text-dark h3 m-0 d-flex justify-content-center">643</p>
+                <p class="text-dark">Following</p>
+                </div> -->
+            </div>
+        </div>
+
+          <div class="container py-3">
+            <div class="row" id="post-container">
+                <!-- <div class="col-lg-3">
+                    <img src="images/post2.jpg" class="img-thumbnail" alt="post">
+                </div>
+                <div class="col-lg-3">
+                    <img src="images/post11.jpg" class="img-thumbnail" alt="post">
+                </div>
+                <div class="col-lg-3">
+                    <img src="images/post4.jpg" class="img-thumbnail" alt="post">
+                </div>
+                <div class="col-lg-3">
+                    <img src="images/post9.jpg" class="img-thumbnail" alt="post">
+                </div> -->
+            </div>
+          </div>
     </main>
 
     <footer>
