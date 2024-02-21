@@ -33,7 +33,7 @@ export function generateListingHtml(listing, isAuthorized = false) {
     imageContainer.appendChild(image);
     listingContainer.append(listingTitle, imageContainer, bodyElement);
     if (isAuthorized === true) {
-        postContainer.appendChild(bidButton);
+        listingContainer.appendChild(bidButton);
     }
     listingWrapper.appendChild(listingContainer);
     return listingWrapper;
