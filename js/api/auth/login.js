@@ -1,6 +1,7 @@
-import { LOGIN_API_URL } from "../constants.mjs";
+import { LOGIN_API_URL } from "/js/api/constants.mjs";
+import { addToLocalStorage } from "/js/utils/local-storage.mjs";
+
 import { fetcher } from "../../fetcher.js";
-import { addToLocalStorage } from "../../utils/local-storage.js";
 import { validateEmail, validatePassword } from "/js/utils/form-validation.mjs";
 
 const form = document.querySelector('#login-form');
@@ -20,8 +21,10 @@ async function loginUser(user) {
             return;
         }
         const token = userLoginData.accessToken;
+        const name = userLoginData.name;
         addToLocalStorage('accessToken', token);
-        window.location.href = '/';
+        addToLocalStorage('name', name);
+        window.location.href = '/listings/index.html';
     } catch (error) {
         alert('Login request failed, please try again.');
     }
@@ -33,6 +36,7 @@ form.addEventListener('submit', async (event) => {
         email: email.value,
         password: password.value,
     };
+
 
     if (!validateLoginForm(userLoginDetails)) {
         return;
@@ -50,4 +54,5 @@ function validateLoginForm(user) {
         alert("Password must be at least 8 characters");
         return false;
     }
+    return true;
 }
