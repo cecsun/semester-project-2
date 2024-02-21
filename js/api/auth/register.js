@@ -12,33 +12,39 @@ async function registerUser(user) {
     });
     if (userRegisterData.errors) {
         alert(userRegisterData.errors[0].message);
-        return;
+        return false;
     }
+    return true;
 }
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const user = {
         name: document.forms["register-form"]["form-name"].value,
         email: document.forms["register-form"]["form-email"].value,
         password: document.forms["register-form"]["form-password"].value,
+        avatar: document.forms["register-form"]["form-avatar"].value,
     };
     if (!validateRegisterForm(user)) {
         return;
     }
-    registerUser(user);
+    // Wait for registration to complete before redirecting
+    if (!await registerUser(user)) {
+        return;
+    }
+    window.location.href = '/login';
 });
 
 
 function validateRegisterForm(user) {
     if (user.name.length <= 5) {
-      alert("Username must be more than 5 characters");
-      return false;
+        alert("Username must be more than 5 characters");
+        return false;
     }
   
     if (user.name.split(" ").length >= 2) {
-      alert("Username cannot contain spaces ");
-      return false;
+        alert("Username cannot contain spaces ");
+        return false;
     }
 
     if (!validateEmail(user.email)) {
@@ -50,4 +56,5 @@ function validateRegisterForm(user) {
         alert("Password must be at least 8 characters");
         return false;
     }
+    return true;
 }
