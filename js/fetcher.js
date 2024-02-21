@@ -1,5 +1,13 @@
 // import { getFromLocalStorage } from "./utils/local-storage.js";
 
+
+/**
+ * 
+ * @param {string} url 
+ * @param {*} options 
+ * @param {*} useToken 
+ * @returns 
+ */
 export async function fetcher(url, options = { method: "GET" }, useToken = false) {
     options = {
         ...options,
