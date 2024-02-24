@@ -6,7 +6,7 @@ import { setListings } from "/js/api/listings/storage.mjs";
 async function main() {
     const isLoggedIn = localStorage.getItem('accessToken') !== null;
     const search = document.forms['search-form']['search'].value;
-    let listings = await fetcher(LISTINGS_API_URL+"?_seller=true&sort=created", { method: "GET" });
+    let listings = await fetcher(LISTINGS_API_URL+"?_seller=true&sort=created&_bids=true", { method: "GET" });
     // Store the listings in separate mjs for use in other modules
     setListings(listings);
 
