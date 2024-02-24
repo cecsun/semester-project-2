@@ -22,8 +22,10 @@ async function loginUser(user) {
         }
         const token = userLoginData.accessToken;
         const name = userLoginData.name;
+        const credits = userLoginData.credits;
         addToLocalStorage('accessToken', token);
         addToLocalStorage('name', name);
+        addToLocalStorage('credits', credits);
         window.location.href = '/listings/index.html';
     } catch (error) {
         alert('Login request failed, please try again.');
