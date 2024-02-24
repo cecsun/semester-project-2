@@ -51,11 +51,18 @@
             <div class="avatar">
               <img id="avatar-image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" class="avatar-image rounded-circle" alt="Profile image" style="height: 200px;"/>
             </div>
-          </div>
+            <form class="update-avatar">
+                <div class="mb-3">
+                    <label for="inputMedia" class="form-label">Media URL</label>
+                    <input type="url" class="form-control" id="update-media" required>
+                </div>
+                <button type="submit" class="" id="submit-update-avatar">Update</button>
+            </form>
+        </div>
         <div class="container d-flex justify-content-center">
             <div class="row">
                 <div class="col-6 px-4">
-                <p class="text-dark h3 m-0 d-flex justify-content-center" id="total-credits">975</p>
+                <p class="text-dark h3 m-0 d-flex justify-content-center" id="total-credits"></p>
                 <p class="text-dark">Total Credits</p>
                 </div>
                 <!-- <div class="col-6 px-4">
