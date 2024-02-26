@@ -6,6 +6,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10708,6 +10709,52 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, .h1 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.listing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0px;
+  margin: 40px 0px;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.listing-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.bid-section input {
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 20px;
+  border: 1px solid #000;
+  float: left;
+}
+
+.bid-section button {
+  background-color: #f5f5f5;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-top: 20px;
+  float: right;
 }
 
 /*# sourceMappingURL=styles.css.map */
