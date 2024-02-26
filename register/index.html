@@ -13,51 +13,68 @@
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div><a class="navbar-brand" href="/">Auction House</a></div>
-            <nav class="page-nav">
-                <ul class="page-nav-list">
-                    <li><a href="/register">Register</a></li>
-                    <li><a href="/login">Login</a></li>
-                </ul>
-                <form class="d-flex" role="search" id="search-form" name="search-form">
-                    <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn" id="search-submit" type="submit">Search</button>
-                </form>
-            </nav>
-        </div>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/listings/index.html">Auction House</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/listings/index.html">Listings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/login/index.html">Log in</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <!-- <form class="d-flex" role="search" id="search-form" name="search-form">
+                        <input class="form-control me-2" name="search" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" id="search-submit" type="submit">Search</button>
+                    </form> -->
+                <!-- </div> -->
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <div class="container">
-            <h1>Register</h1>
-            <form action="/index.html" id="register-form" name="register-form">
-                <div>
-                    <label for="name">Your name</label>
-                    <input name="name" id="form-name" value=""/>
+    <main class="flex-grow-1 bg-dark text-light">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <div class="py-3 d-flex justify-content-center">
+                        <h1>Register</h1>
+                    </div>
+                    <form action="/index.html" id="register-form" name="register-form">
+                        <div class="mb-3">
+                            <label for="name">Your name</label>
+                            <input name="name" id="form-name" value="" style="width: 100%;"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">Your email</label>
+                            <input name="email" type="email" id="form-email" placeholder="@stud.noroff.no" style="width: 100%;"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password">Your password</label>
+                            <input name="password" type="password" id="form-password" value="" style="width: 100%;"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="avatar">Avatar URL</label>
+                            <input name="avatar" type="url" id="form-avatar" style="width: 100%;">
+                        </div>
+                        <div class="py-3 d-flex float-end">
+                            <button class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <label for="email">Your email</label>
-                    <input name="email" type="email" id="form-email" placeholder="@stud.noroff.no"/>
-                </div>
-                <div>
-                    <label for="password">Your password</label>
-                    <input name="password" type="password" id="form-password" value=""/>
-                </div>
-                <div>
-                    <label for="avatar">Avatar URL</label>
-                    <input name="avatar" type="url" id="form-avatar">
-                </div>
-                <div>
-                    <button>Submit</button>
-                </div>
-            </form>
+            </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
+    <footer class="d-flex bg-dark text-light pt-5 pb-3">
+        <div class="container-fluid">
             <p>&copy; 2024 Auction House</p>
         </div>
     </footer>
