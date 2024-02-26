@@ -32,7 +32,6 @@ export function generateListingHtml(listing, isAuthorized = false) {
     const bidButton = document.createElement('button');
     bidButton.textContent = 'Bid';
 
-
     const bidSection = document.createElement('div');
     bidSection.classList.add('bid-section');
     bidSection.appendChild(bidButton);
