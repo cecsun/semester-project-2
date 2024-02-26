@@ -1,2 +1,14 @@
 @import "variables"; /* /src/scss/_variables.scss */
 @import "../../node_modules/bootstrap/scss/bootstrap";
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+// * {
+//     font-family: 'Montserrat', sans-serif;
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+}
