@@ -9,6 +9,10 @@ async function main() {
         window.location.href = "/login";
     }
     const name = localStorage.getItem('name');
+
+    const username = document.getElementById("username");
+    username.innerHTML = name;
+
     const profile = await fetcher(`${PROFILE_API_URL}/${name}`, { method: "GET" }, true);
     console.log(profile);
     credits.innerHTML = profile.credits;
