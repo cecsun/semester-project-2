@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* /src/scss/_variables.scss */
 /*!
  * Bootstrap  v5.2.0 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -10710,6 +10709,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* /src/scss/_variables.scss */
 * {
   font-family: "Montserrat", sans-serif;
 }
