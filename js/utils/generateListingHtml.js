@@ -42,7 +42,7 @@ export function generateListingHtml(listing, isAuthorized = false) {
     input.classList.add('bid-input');
     bidSection.appendChild(input);
 
-    console.log(listing);
+    // console.log(listing);
 
     // Show currently highest bid
     const bids = listing.bids;
@@ -51,7 +51,7 @@ export function generateListingHtml(listing, isAuthorized = false) {
     if (bids.length > 0) {
         highestBid = Math.max(...bids.map(bid => bid.amount));
     }
-    console.log(listing.title, " ", highestBid);
+    // console.log(listing.title, " ", highestBid);
     const highestBidElement = document.createElement('p');
     highestBidElement.textContent = `Current bid: ${highestBid}`;
     highestBidElement.classList.add('highest-bid');
@@ -66,7 +66,7 @@ export function generateListingHtml(listing, isAuthorized = false) {
     bidButton.addEventListener('click', async (event) => {
         event.preventDefault();
         const bid = input.value;
-        console.log(bid);
+        // console.log(bid);
         if (bid < 0) {
             return;
         }
@@ -109,7 +109,7 @@ async function placeBid(id, bid) {
         { method: 'POST', body: JSON.stringify(body) }, 
         true,
     );
-    console.log(response);
+    // console.log(response);
     if (response.errors) {
         alert(response.errors[0].message);
         return false;

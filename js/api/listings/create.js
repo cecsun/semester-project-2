@@ -35,7 +35,7 @@ function main() {
     submitNewListing.addEventListener('click', async (event) => {
         event.preventDefault();
         const response = await createListing();
-        console.log(response);
+        // console.log(response);
     });
 }
 
