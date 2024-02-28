@@ -8,5 +8,5 @@ export function getFromLocalStorage(key) {
 
 export function logout() {
     localStorage.removeItem('accessToken');
-    window.location.href = '/login/index.html';
+    window.location.href = '/index.html';
 }
