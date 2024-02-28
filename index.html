@@ -49,24 +49,26 @@
         </nav>
     </header>
 
-    <main class="flex-grow-1 bg-dark text-light">
-        <div class="container py-5">
+    <main class="flex-grow-1">
+        <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-6">
-                    <div class="py-3 d-flex justify-content-center">
-                        <h1>Login</h1>
-                    </div>
+                <div id="register-container" class="col-md-5 bg-success">
+                    <h3 class="text-danger">Don't have an account?</h3>
+                    <a class="register-button bg-danger text-light p-2 my-4 text-uppercase text-decoration-none" href="/register/index.html">Register</a>
+                </div>
+                <div id="login-container" class="col-md-7 bg-primary">
+                    <h3 class="my-4 d-flex justify-content-center text-danger">Login</h3>
                     <form action="" id="login-form" name="login-form">
                         <div class="mb-3">
                             <label for="email">Your email</label>
-                            <input name="email" type="email" id="form-email" placeholder="@stud.noroff.no" style="width: 100%;"/>
+                            <input name="email" type="email" id="form-email" placeholder="@stud.noroff.no"/>
                         </div>
                         <div class="mb-3">
                             <label for="password">Your password</label>
-                            <input name="password" type="password" id="form-password" value="" style="width: 100%;"/>
+                            <input name="password" type="password" id="form-password" value=""/>
                         </div>
-                        <div class="py-3 d-flex float-end">
-                            <button class="btn btn-success">Submit</button>
+                        <div class="py-3 d-flex justify-content-center">
+                            <button class="btn btn-success">Login</button>
                         </div>
                     </form>
                 </div>
