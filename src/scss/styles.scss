@@ -1,13 +1,14 @@
-// @import "variables"; /* /src/scss/_variables.scss */
+@import "variables"; /* /src/scss/_variables.scss */
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-* {
-    font-family: 'Montserrat', sans-serif;
-    // margin: 0;
-    // padding: 0;
-    // box-sizing: border-box;
-}
+// * {
+//     font-family: 'Montserrat', sans-serif;
+//     // margin: 0;
+//     // padding: 0;
+//     // box-sizing: border-box;
+// }
 
 html, body {
     // width: 100%;
@@ -15,10 +16,12 @@ html, body {
 }
 
 h1 {
+    font-family: 'Merriweather', serif;
     font-size: 30px;
 }
 
 p {
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
 
@@ -30,7 +33,7 @@ p {
     flex-direction: column;
     padding: 20px 0px;
     margin: 40px 0px;
-    background-color: blue;
+    background-color: $success;
     border-radius: 10px;
 }
 

@@ -1,11 +1,12 @@
 @charset "UTF-8";
+/* /src/scss/_variables.scss */
 /*!
  * Bootstrap  v5.2.0 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10709,15 +10710,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-* {
-  font-family: "Montserrat", sans-serif;
-}
-
 h1, .h1 {
+  font-family: "Merriweather", serif;
   font-size: 30px;
 }
 
 p {
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
 }
 
@@ -10728,7 +10727,7 @@ p {
   flex-direction: column;
   padding: 20px 0px;
   margin: 40px 0px;
-  background-color: blue;
+  background-color: #198754;
   border-radius: 10px;
 }
 
