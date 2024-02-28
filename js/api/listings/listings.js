@@ -2,11 +2,11 @@ import { generateListingHtml } from "../../utils/generateListingHtml.js";
 
 const listingsContainer = document.getElementById('display-listings');
 
-function sortCallback(a, b) {
-    if (a.title < b.title) {
+function sortNewestCallback(a, b) {
+    if (a.created > b.created) {
       return -1;
     }
-    if (a.title > b.title) {
+    if (a.created < b.created) {
       return 1;
     } 
     return 0;
@@ -21,7 +21,7 @@ export async function displayListings(listings, filterCallback, isAuthorized = f
     listings
     .filter(filterCallback)
     .filter(filterExpired)
-    .sort(sortCallback)
+    .sort(sortNewestCallback)
     .forEach((listing) => {
         const currentListing = generateListingHtml(listing, isAuthorized);
         listingsContainer.appendChild(currentListing);
