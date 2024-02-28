@@ -18,8 +18,8 @@ export function generateListingHtml(listing, isAuthorized = false) {
 
     const imageContainer = document.createElement('div');
     const image = document.createElement('img');
-    if (media) {
-        image.src = media;
+    if (media.length > 0) {
+        image.src = media[0];
     } else {
         image.src = 'https://via.placeholder.com/150';
     }
