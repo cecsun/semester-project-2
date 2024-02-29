@@ -35,13 +35,12 @@ async function createListing() {
 function main() {
     const submitNewListingForm = document.getElementById('new-listing-form');
     if (!localStorage.getItem('accessToken')) {
-        submitNewListingForm.innerHTML = "User must be logged in to create a listing. Please log in.";
+        submitNewListingForm.innerHTML = "<p style='color: white; text-align: center;'> User must be logged in to create a listing. Please login.</p>";
         return;
     }
     submitNewListing.addEventListener('click', async (event) => {
         event.preventDefault();
         const response = await createListing();
-        // console.log(response);
     });
 }
 
