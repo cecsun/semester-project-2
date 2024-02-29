@@ -14,67 +14,66 @@
 <body>
 
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+        <nav class="navbar navbar-expand-md bg-success">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/listings/index.html">Auction House</a>
+                <a class="navbar-brand text-uppercase text-danger" href="/listings/index.html">Auction House</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse text-uppercase text-danger" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
                         <div class="d-none d-sm-block">
                             <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/listings/index.html">Listings</a></li>
+                            <ul class="dropdown-menu text-uppercase bg-danger">
+                                <li><a class="dropdown-item text-success d-flex justify-content-center" href="/listings/index.html">Listings</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/index.html">Log in</a></li>
+                                <li><a class="dropdown-item text-success d-flex justify-content-center" href="/index.html">Login</a></li>
                             </ul>
                             </li>
                         </div>
                         <div class="container d-sm-none d-flex justify-content-center">
-                            <ul class="text-light my-4" style="list-style: none;">
+                            <ul class="text-danger my-4" style="list-style: none;">
                                 <li><a class="dropdown-item mb-3" href="/listings/index.html">Listings</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/index.html">Log in</a></li>
+                                <li><a class="dropdown-item" href="/index.html">Login</a></li>
                             </ul>
                         </div>
                     </ul>
-                    <!-- <form class="d-flex" role="search" id="search-form" name="search-form">
-                        <input class="form-control me-2" name="search" type="text" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" id="search-submit" type="submit">Search</button>
-                    </form> -->
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="flex-grow-1 bg-dark text-light">
-        <div class="container py-5">
+    <main class="flex-grow-1">
+        <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-6">
+                <div id="login-register-page" class="col-md-5 bg-success">
+                    <h3 class="text-danger">Already have an account?</h3>
+                    <a class="login-button bg-danger text-light p-2 my-4 text-uppercase text-decoration-none" href="/index.html">Login</a>
+                </div>
+                <div id="register-container" class="col-md-7 bg-info">
                     <div class="py-3 d-flex justify-content-center">
-                        <h1>Register</h1>
+                        <h3 class="my-4 d-flex justify-content-center text-danger">Register</h3>
                     </div>
                     <form action="/index.html" id="register-form" name="register-form">
                         <div class="mb-3">
                             <label for="name">Your name</label>
-                            <input name="name" id="form-name" value="" style="width: 100%;"/>
+                            <input name="name" id="form-name" value=""/>
                         </div>
                         <div class="mb-3">
                             <label for="email">Your email</label>
-                            <input name="email" type="email" id="form-email" placeholder="@stud.noroff.no" style="width: 100%;"/>
+                            <input name="email" type="email" id="form-email" placeholder="@stud.noroff.no"/>
                         </div>
                         <div class="mb-3">
                             <label for="password">Your password</label>
-                            <input name="password" type="password" id="form-password" value="" style="width: 100%;"/>
+                            <input name="password" type="password" id="form-password" value=""/>
                         </div>
                         <div class="mb-3">
                             <label for="avatar">Avatar URL</label>
-                            <input name="avatar" type="url" id="form-avatar" style="width: 100%;">
+                            <input name="avatar" type="url" id="form-avatar">
                         </div>
-                        <div class="py-3 d-flex float-end">
-                            <button class="btn btn-primary">Submit</button>
+                        <div class="py-3 d-flex justify-content-center">
+                            <button class="btn btn-danger text-uppercase">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -82,7 +81,7 @@
         </div>
     </main>
 
-    <footer class="d-flex bg-dark text-light pt-5 pb-3">
+    <footer class="d-flex bg-success text-danger py-3">
         <div class="container-fluid">
             <p>&copy; 2024 Auction House</p>
         </div>
