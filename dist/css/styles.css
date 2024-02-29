@@ -14,7 +14,7 @@
   --bs-pink: #d63384;
   --bs-red: #35454E;
   --bs-orange: #fd7e14;
-  --bs-yellow: #ffc107;
+  --bs-yellow: #A0C07E;
   --bs-green: #F6F7F7;
   --bs-teal: #20c997;
   --bs-cyan: #889982;
@@ -35,7 +35,7 @@
   --bs-secondary: #6c757d;
   --bs-success: #F6F7F7;
   --bs-info: #889982;
-  --bs-warning: #ffc107;
+  --bs-warning: #A0C07E;
   --bs-danger: #35454E;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
@@ -43,7 +43,7 @@
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 246, 247, 247;
   --bs-info-rgb: 136, 153, 130;
-  --bs-warning-rgb: 255, 193, 7;
+  --bs-warning-rgb: 160, 192, 126;
   --bs-danger-rgb: 53, 69, 78;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
@@ -73,7 +73,7 @@
   --bs-link-color: #76ACA8;
   --bs-link-hover-color: #5e8a86;
   --bs-code-color: #d63384;
-  --bs-highlight-bg: #fff3cd;
+  --bs-highlight-bg: #ecf2e5;
 }
 
 *,
@@ -1866,13 +1866,13 @@ progress {
 
 .table-warning {
   --bs-table-color: #000;
-  --bs-table-bg: #fff3cd;
-  --bs-table-border-color: #e6dbb9;
-  --bs-table-striped-bg: #f2e7c3;
+  --bs-table-bg: #ecf2e5;
+  --bs-table-border-color: #d4dace;
+  --bs-table-striped-bg: #e0e6da;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #e6dbb9;
+  --bs-table-active-bg: #d4dace;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #ece1be;
+  --bs-table-hover-bg: #dae0d4;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -2864,19 +2864,19 @@ textarea.form-control-lg {
 
 .btn-warning {
   --bs-btn-color: #000;
-  --bs-btn-bg: #ffc107;
-  --bs-btn-border-color: #ffc107;
+  --bs-btn-bg: #A0C07E;
+  --bs-btn-border-color: #A0C07E;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #ffca2c;
-  --bs-btn-hover-border-color: #ffc720;
-  --bs-btn-focus-shadow-rgb: 217, 164, 6;
+  --bs-btn-hover-bg: #aec991;
+  --bs-btn-hover-border-color: #aac68b;
+  --bs-btn-focus-shadow-rgb: 136, 163, 107;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ffcd39;
-  --bs-btn-active-border-color: #ffc720;
+  --bs-btn-active-bg: #b3cd98;
+  --bs-btn-active-border-color: #aac68b;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #ffc107;
-  --bs-btn-disabled-border-color: #ffc107;
+  --bs-btn-disabled-bg: #A0C07E;
+  --bs-btn-disabled-border-color: #A0C07E;
 }
 
 .btn-danger {
@@ -2999,19 +2999,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-warning {
-  --bs-btn-color: #ffc107;
-  --bs-btn-border-color: #ffc107;
+  --bs-btn-color: #A0C07E;
+  --bs-btn-border-color: #A0C07E;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #ffc107;
-  --bs-btn-hover-border-color: #ffc107;
-  --bs-btn-focus-shadow-rgb: 255, 193, 7;
+  --bs-btn-hover-bg: #A0C07E;
+  --bs-btn-hover-border-color: #A0C07E;
+  --bs-btn-focus-shadow-rgb: 160, 192, 126;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ffc107;
-  --bs-btn-active-border-color: #ffc107;
+  --bs-btn-active-bg: #A0C07E;
+  --bs-btn-active-border-color: #A0C07E;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #ffc107;
+  --bs-btn-disabled-color: #A0C07E;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #ffc107;
+  --bs-btn-disabled-border-color: #A0C07E;
   --bs-gradient: none;
 }
 
@@ -4642,12 +4642,12 @@ textarea.form-control-lg {
 }
 
 .alert-warning {
-  --bs-alert-color: #664d03;
-  --bs-alert-bg: #fff3cd;
-  --bs-alert-border-color: #ffecb5;
+  --bs-alert-color: #60734c;
+  --bs-alert-bg: #ecf2e5;
+  --bs-alert-border-color: #e3ecd8;
 }
 .alert-warning .alert-link {
-  color: #523e02;
+  color: #4d5c3d;
 }
 
 .alert-danger {
@@ -5026,17 +5026,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-warning {
-  color: #664d03;
-  background-color: #fff3cd;
+  color: #60734c;
+  background-color: #ecf2e5;
 }
 .list-group-item-warning.list-group-item-action:hover, .list-group-item-warning.list-group-item-action:focus {
-  color: #664d03;
-  background-color: #e6dbb9;
+  color: #60734c;
+  background-color: #d4dace;
 }
 .list-group-item-warning.list-group-item-action.active {
   color: #fff;
-  background-color: #664d03;
-  border-color: #664d03;
+  background-color: #60734c;
+  border-color: #60734c;
 }
 
 .list-group-item-danger {
@@ -6568,7 +6568,7 @@ textarea.form-control-lg {
 
 .text-bg-warning {
   color: #000 !important;
-  background-color: RGBA(255, 193, 7, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(160, 192, 126, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-danger {
@@ -6615,10 +6615,10 @@ textarea.form-control-lg {
 }
 
 .link-warning {
-  color: #ffc107 !important;
+  color: #A0C07E !important;
 }
 .link-warning:hover, .link-warning:focus {
-  color: #ffcd39 !important;
+  color: #b3cd98 !important;
 }
 
 .link-danger {
@@ -10772,39 +10772,64 @@ p, label, input, ul {
   color: #f8f9fa;
 }
 
+#submit-new-listing {
+  font-weight: 600;
+}
+
+#listings-page {
+  background-color: #76ACA8;
+}
+
 .listing-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 20px 0px;
-  margin: 40px 0px;
+  margin: 20px 0px 40px 0px;
   background-color: #F6F7F7;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.listing-container h2, .listing-container .h2 {
+  color: #35454E;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .listing-image {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
 }
 
 .bid-section input {
-  padding: 10px;
-  font-size: 20px;
-  margin-top: 20px;
-  border: 1px solid #000;
+  padding: 5px;
+  margin: 0px 10px 10px 20px;
   float: left;
+  border-radius: 5px;
 }
 
 .bid-section button {
-  background-color: #f5f5f5;
-  color: #000;
-  border: 1px solid #000;
-  padding: 10px 20px;
-  font-size: 20px;
-  margin-top: 20px;
+  padding: 5px 20px;
+  margin: 0px 20px 10px 10px;
   float: right;
+  border-radius: 5px;
+  background-color: #A0C07E;
+  text-transform: uppercase;
+  color: #f8f9fa;
+  font-weight: 600;
+}
+
+.bid-section button:hover {
+  opacity: 0.8;
+}
+
+.bid-section p {
+  margin: 0px 0px 0px 20px;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

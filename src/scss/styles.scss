@@ -41,7 +41,7 @@ p, label, input, ul {
     font-family: 'Montserrat', sans-serif;
 }
 
-// Login
+// Login and register
 
 #register-login-page, #login-register-page {
     display: flex;
@@ -90,39 +90,64 @@ p, label, input, ul {
 
 // Listings
 
+#submit-new-listing {
+    font-weight: 600;
+}
+
+#listings-page {
+    background-color: $primary;
+}
+
 .listing-container {
     display: flex;
-    // flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 20px 0px;
-    margin: 40px 0px;
+    margin: 20px 0px 40px 0px;
     background-color: $success;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+.listing-container h2 {
+    color: $danger;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .listing-image {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
 }
 
 .bid-section input {
     // width: 100%;
-    padding: 10px;
-    font-size: 20px;
-    margin-top: 20px;
-    border: 1px solid #000;
+    padding: 5px;
+    margin: 0px 10px 10px 20px;
     float: left;
+    border-radius: 5px;
 }
 
 .bid-section button {
-    background-color: #f5f5f5;
-    color: #000;
-    border: 1px solid #000;
-    padding: 10px 20px;
-    font-size: 20px;
-    margin-top: 20px;
+    padding: 5px 20px;
+    margin: 0px 20px 10px 10px;
     float: right;
+    border-radius: 5px;
+    background-color: $warning;
+    text-transform: uppercase;
+    color: $light;
+    font-weight: 600;
+}
+
+.bid-section button:hover {
+    opacity: 0.8;
+}
+
+.bid-section p {
+    margin: 0px 0px 0px 20px;
+    // float: left;
+    padding: 5px;
 }
