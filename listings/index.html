@@ -16,7 +16,7 @@
 <body>
 
 
-    <header class="sticky-top">
+    <!-- <header class="sticky-top">
         <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/listings/index.html">Auction House</a>
@@ -50,27 +50,62 @@
                 </div>
             </div>
         </nav>
+    </header> -->
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-md bg-success">
+            <div class="container-fluid">
+                <a class="navbar-brand text-uppercase text-danger" href="/listings/index.html">Auction House</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-uppercase text-danger" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <div class="d-none d-sm-block">
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                            <ul class="dropdown-menu text-uppercase bg-danger">
+                                <li><a class="dropdown-item text-success d-flex justify-content-center" href="/profile/index.html">Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-success d-flex justify-content-center" id="logout-button" href="/index.html">Log out</a></li>
+                            </ul>
+                            </li>
+                        </div>
+                        <div class="container d-sm-none d-flex justify-content-center">
+                            <ul class="text-danger my-4" style="list-style: none;">
+                                <li><a class="dropdown-item mb-3" href="/profile/index.html">Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" id="logout-button" href="/index.html">Log out</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                    <form class="d-flex" role="search" id="search-form" name="search-form">
+                        <input class="form-control me-2" name="search" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-danger" id="search-submit" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="flex-grow-1 bg-dark text-light">
-
-        <div class="container py-5">
+    <main class="flex-grow-1">
+        <div class="container-fluid py-5 bg-danger" id="create-listing">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6">
-                    <div class="d-flex justify-content-center py-3 text-uppercase">
-                        <h1>Create a listing</h1>
+                    <div class="d-flex justify-content-center">
+                        <h3 class="my-4 text-success">Create a listing</h3>
                     </div>
                     <form id="new-listing-form">
                         <div class="mb-3">
-                            <label for="inputTitle" class="form-label">Title</label>
+                            <label for="inputTitle" class="form-label text-light">Title</label>
                             <input type="text" class="form-control" id="inputTitle" required>
                         </div>
                         <div class="mb-3">
-                            <label for="inputDescription" class="form-label">Description</label>
+                            <label for="inputDescription" class="form-label text-light">Description</label>
                             <textarea id="inputDescription" class="form-control rounded" style="width:100%; height:100px;" required></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="inputMedia1" class="form-label">Media URLs </label>
+                            <label for="inputMedia1" class="form-label text-light">Media URLs </label>
                             <input type="url" class="form-control" id="inputMedia1" required>
                         </div>
                         <div class="mb-3">
@@ -82,36 +117,38 @@
                             <input type="url" class="form-control" id="inputMedia3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="inputEndsAt" class="form-label">Ends At</label>
+                            <label for="inputEndsAt" class="form-label text-light">Ends At</label>
                             <input type="datetime-local" class="form-control" id="inputEndsAt" required>
                         </div>
-                        <button type="submit" class="btn btn-light text-uppercase float-end" id="submit-new-listing">Submit</button>
+                        <button type="submit" class="btn btn-warning text-light text-uppercase float-end my-3 px-4 py-2" id="submit-new-listing">Submit</button>
                     </form>
             
                 </div>
             </div>
         </div>
 
-    <div class="d-flex justify-content-center py-3 text-uppercase">
-        <h1>Listings</h1>
-    </div>
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6" id="display-listings">
-                <!-- <div class="listing-wrapper">
-                    <div class="listing-container">
-                        <h2>Hei</h2>
-                        <div><img src="https://shorturl.at/c1zF0" alt="Title" class="listing-image"/></div>
-                        <p>Text</p>
-                        <button>Bid</button>
+        <div id="listings-page" class="pt-4">
+            <div class="d-flex justify-content-center">
+            <h3 class="my-4 text-success">Listings</h3>
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6" id="display-listings">
+                        <!-- <div class="listing-wrapper">
+                            <div class="listing-container">
+                                <h2>Hei</h2>
+                                <div><img src="https://shorturl.at/c1zF0" alt="Title" class="listing-image"/></div>
+                                <p>Text</p>
+                                <button>Bid</button>
+                            </div>
+                        </div> -->
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
-      </div>
     </main>
 
-    <footer class="d-flex bg-dark text-light pt-5 pb-3">
+    <footer class="d-flex bg-success text-danger py-3">
         <div class="container-fluid">
             <p>&copy; 2024 Auction House</p>
         </div>
