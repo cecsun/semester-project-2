@@ -43,43 +43,43 @@ p, label, input, ul {
 
 // Login
 
-#register-container {
+#register-login-page, #login-register-page {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 400px;
+    height: 500px;
 }
 
-#register-container .register-button, #login-container form button {
+#register-login-page .register-button, #login-container form button, #login-register-page .login-button, #register-container form button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     border-radius: 5px;
 }
 
-#register-container .register-button:hover, #login-container form button:hover {
+#register-login-page .register-button:hover, #login-container form button:hover, #login-register-page .login-button:hover, #register-container form button:hover {
     opacity: 0.8;
 }
 
-#login-container {
+#login-container, #register-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 400px;
+    height: 500px;
 }
 
-#login-container form {
+#login-container form, #register-container form {
     width: 50%;
     // max-width: 500px;
     margin: 0 auto;
 }
 
-#login-container form input {
+#login-container form input, #register-container form input{
     width: 100%;
     border-radius: 5px;
 }
 
-#login-form label {
+#login-form label, #register-form label {
     color: $light;
 }
 
