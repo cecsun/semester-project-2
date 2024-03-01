@@ -4,7 +4,6 @@ import { fetcher } from '/js/fetcher.js';
 const credits = document.getElementById("total-credits");
 const avatar = document.getElementById("avatar-image");
 async function main() {
-    // Redirect to login if not logged in
     if (!localStorage.getItem('accessToken')) {
         window.location.href = "/index.html";
     }

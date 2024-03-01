@@ -42,22 +42,17 @@ export function generateListingHtml(listing, isAuthorized = false) {
     input.classList.add('bid-input');
     bidSection.appendChild(input);
 
-    // console.log(listing);
-
-    // Show currently highest bid
     const bids = listing.bids;
     let highestBid = 0;
 
     if (bids.length > 0) {
         highestBid = Math.max(...bids.map(bid => bid.amount));
     }
-    // console.log(listing.title, " ", highestBid);
     const highestBidElement = document.createElement('p');
     highestBidElement.textContent = `Current bid: ${highestBid}`;
     highestBidElement.classList.add('highest-bid');
     bidSection.appendChild(highestBidElement);
 
-    // Add end of bid date without seconds and PM/AM
     const endOfBid = document.createElement('p');
     endOfBid.textContent = `Ends at: ${new Date(listing.endsAt).toLocaleString()}`;
     endOfBid.classList.add('end-of-bid');
@@ -66,7 +61,6 @@ export function generateListingHtml(listing, isAuthorized = false) {
     bidButton.addEventListener('click', async (event) => {
         event.preventDefault();
         const bid = input.value;
-        // console.log(bid);
         if (bid < 0) {
             return;
         }
@@ -83,7 +77,6 @@ export function generateListingHtml(listing, isAuthorized = false) {
         }
 
         const success = await placeBid(listing.id, bid);
-        // Update the highest bid immediately
         if (success) {
             highestBidElement.textContent = `Current bid: ${bid}`;
         }
@@ -109,7 +102,6 @@ async function placeBid(id, bid) {
         { method: 'POST', body: JSON.stringify(body) }, 
         true,
     );
-    // console.log(response);
     if (response.errors) {
         alert(response.errors[0].message);
         return false;

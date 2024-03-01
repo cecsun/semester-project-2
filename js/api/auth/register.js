@@ -28,7 +28,6 @@ form.addEventListener('submit', async (event) => {
     if (!validateRegisterForm(user)) {
         return;
     }
-    // Wait for registration to complete before redirecting
     if (!await registerUser(user)) {
         return;
     }
