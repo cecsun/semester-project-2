@@ -18,8 +18,6 @@
     font-weight: 600;
 }
 
-
-
 // Main
 
 h1, h2, h3, h4, h5 {
@@ -60,7 +58,6 @@ p, label, input, ul {
 
 #login-container form, #register-container form {
     width: 50%;
-    // max-width: 500px;
     margin: 0 auto;
 }
 
@@ -72,11 +69,6 @@ p, label, input, ul {
 #login-form label, #register-form label {
     color: $light;
 }
-
-
-
-
-
 
 // Listings
 
@@ -114,7 +106,6 @@ p, label, input, ul {
 }
 
 .bid-section input {
-    // width: 100%;
     padding: 5px;
     margin: 0px 10px 10px 20px;
     float: left;
@@ -138,6 +129,5 @@ p, label, input, ul {
 
 .bid-section p {
     margin: 0px 0px 0px 20px;
-    // float: left;
     padding: 5px;
 }
