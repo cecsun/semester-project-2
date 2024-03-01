@@ -48,9 +48,9 @@ For this project we were tasked with launching an auction website where users ca
 ## Setup and run the project
 
 1. Clone the repository
-git clone https://github.com/cecsun/semester-project-2.git
+  git clone https://github.com/cecsun/semester-project-2.git
 
 2. Run the project locally
-npm start
+  npm start
 
 
