@@ -13,7 +13,6 @@ async function main() {
     username.innerHTML = name;
 
     const profile = await fetcher(`${PROFILE_API_URL}/${name}`, { method: "GET" }, true);
-    console.log(profile);
     credits.innerHTML = profile.credits;
     avatar.src = profile.avatar ? profile.avatar : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
 
@@ -31,7 +30,6 @@ updateAvatar.addEventListener('click', async (event) => {
             body: JSON.stringify({ avatar: newAvatar })
         },
         true);
-    console.log(response);
     if (response.errors) {
         alert(response.errors[0].message);
         return;

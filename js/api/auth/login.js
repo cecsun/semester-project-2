@@ -15,7 +15,6 @@ async function loginUser(user) {
             method: 'POST',
             body: postBody,
         });
-        console.log(userLoginData);
         if (userLoginData.errors) {
             alert(userLoginData.errors[0].message);
             return;
