@@ -31,7 +31,7 @@ form.addEventListener('submit', async (event) => {
     if (!await registerUser(user)) {
         return;
     }
-    window.location.href = '/login';
+    window.location.href = '/';
 });
 
 
