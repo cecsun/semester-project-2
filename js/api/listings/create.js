@@ -41,6 +41,9 @@ function main() {
     submitNewListing.addEventListener('click', async (event) => {
         event.preventDefault();
         const response = await createListing();
+        if (response) {
+            window.location.href = '/listings';
+        }
     });
 }
 
