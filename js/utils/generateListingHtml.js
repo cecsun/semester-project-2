@@ -42,6 +42,10 @@ export function generateListingHtml(listing, isAuthorized = false) {
     input.classList.add('bid-input');
     bidSection.appendChild(input);
 
+    const messageElement = document.createElement('p');
+    messageElement.classList.add('bid-message');  // you can style this class for error/success colors
+    bidSection.appendChild(messageElement);
+
     const bids = listing.bids;
     let highestBid = 0;
 
@@ -60,29 +64,33 @@ export function generateListingHtml(listing, isAuthorized = false) {
 
     bidButton.addEventListener('click', async (event) => {
         event.preventDefault();
+        messageElement.textContent = "";  // Clear previous messages
+
         const bid = input.value;
         if (bid < 0) {
+            messageElement.textContent = "Bid cannot be negative.";
+            messageElement.style.color = "red";
             return;
         }
 
         if (!validateBid(bid)) {
-            alert('Invalid bid amount');
+            messageElement.textContent = 'Invalid bid amount';
+            messageElement.style.color = "red";
             return;
         }
         const available_credits = getFromLocalStorage('credits');
 
         if (parseInt(available_credits) < bid) {
-            alert('Insufficient credits, available credits: ' + available_credits);
+            messageElement.textContent = `Insufficient credits, available credits: ${available_credits}`;
+            messageElement.style.color = "red";
             return;
         }
 
-        const success = await placeBid(listing.id, bid);
+        const success = await placeBid(listing.id, bid, messageElement, highestBidElement);
         if (success) {
-            highestBidElement.textContent = `Current bid: ${bid}`;
+            input.value = ""; // clear input on success
         }
-     
     });
-
 
     imageContainer.appendChild(image);
     listingContainer.append(listingTitle, imageContainer, bodyElement);
@@ -93,7 +101,7 @@ export function generateListingHtml(listing, isAuthorized = false) {
     return listingWrapper;
 }
 
-async function placeBid(id, bid) {
+async function placeBid(id, bid, messageElement, highestBidElement) {
     const body = {
         amount: parseInt(bid),
     }
@@ -103,12 +111,17 @@ async function placeBid(id, bid) {
         true,
     );
     if (response.errors) {
-        alert(response.errors[0].message);
+        messageElement.textContent = response.errors[0].message;
+        messageElement.style.color = "red";
         return false;
     }
     const credits = getFromLocalStorage('credits');
     const newCredits = credits - bid;
     addToLocalStorage('credits', newCredits);
-    alert('Bid placed successfully');
+
+    messageElement.textContent = 'Bid placed successfully';
+    messageElement.style.color = "green";
+    highestBidElement.textContent = `Current bid: ${bid}`;
+
     return true;
 }

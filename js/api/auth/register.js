@@ -4,6 +4,15 @@ import { validateEmail, validatePassword } from "/js/utils/form-validation.mjs";
 
 const form = document.querySelector('#register-form');
 
+// Create or get the inline error container
+let errorDisplay = document.getElementById("register-error");
+if (!errorDisplay) {
+  errorDisplay = document.createElement("p");
+  errorDisplay.id = "register-error";
+  errorDisplay.className = "text-danger text-center mt-3";
+  form.prepend(errorDisplay);
+}
+
 async function registerUser(user) {
     const postBody = JSON.stringify(user);
     const userRegisterData = await fetcher(REGISTER_API_URL, {
@@ -11,20 +20,24 @@ async function registerUser(user) {
         body: postBody,
     });
     if (userRegisterData.errors) {
-        alert(userRegisterData.errors[0].message);
+        errorDisplay.textContent = userRegisterData.errors[0].message;
         return false;
     }
+    errorDisplay.textContent = ""; // Clear errors if any success
     return true;
 }
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    errorDisplay.textContent = ""; // Clear previous errors
+
     const user = {
-        name: document.forms["register-form"]["form-name"].value,
-        email: document.forms["register-form"]["form-email"].value,
-        password: document.forms["register-form"]["form-password"].value,
-        avatar: document.forms["register-form"]["form-avatar"].value,
+        name: form["form-name"].value,
+        email: form["form-email"].value,
+        password: form["form-password"].value,
+        avatar: form["form-avatar"].value,
     };
+
     if (!validateRegisterForm(user)) {
         return;
     }
@@ -37,23 +50,25 @@ form.addEventListener('submit', async (event) => {
 
 function validateRegisterForm(user) {
     if (user.name.length <= 5) {
-        alert("Username must be more than 5 characters");
+        errorDisplay.textContent = "Username must be more than 5 characters";
         return false;
     }
   
-    if (user.name.split(" ").length >= 2) {
-        alert("Username cannot contain spaces ");
+    if (user.name.includes(" ")) {
+        errorDisplay.textContent = "Username cannot contain spaces";
         return false;
     }
 
     if (!validateEmail(user.email)) {
-        alert('Email must be of type @stud.noroff.no or @noroff.no');
+        errorDisplay.textContent = 'Email must be of type @stud.noroff.no or @noroff.no';
         return false; 
     }
   
     if (!validatePassword(user.password)) {
-        alert("Password must be at least 8 characters");
+        errorDisplay.textContent = "Password must be at least 8 characters";
         return false;
     }
+
+    errorDisplay.textContent = ""; // Clear any error
     return true;
 }
