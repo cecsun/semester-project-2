@@ -65,31 +65,90 @@
           <div class="d-flex justify-content-center">
             <h3 class="my-4 text-success">Create a listing</h3>
           </div>
-          <form id="new-listing-form">
-            <div class="mb-3">
-              <label for="inputTitle" class="form-label text-light">Title</label>
-              <input type="text" class="form-control" id="inputTitle" required>
-            </div>
-            <div class="mb-3">
-              <label for="inputDescription" class="form-label text-light">Description</label>
-              <textarea id="inputDescription" class="form-control rounded" style="width:100%; height:100px;" required></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="inputMedia1" class="form-label text-light">Media URLs</label>
-              <input type="url" class="form-control" id="inputMedia1" required>
-            </div>
-            <div class="mb-3">
-              <input type="url" class="form-control" id="inputMedia2" placeholder="Optional Media URL">
-            </div>
-            <div class="mb-3">
-              <input type="url" class="form-control" id="inputMedia3" placeholder="Optional Media URL">
-            </div>
-            <div class="mb-3">
-              <label for="inputEndsAt" class="form-label text-light">Ends At</label>
-              <input type="datetime-local" class="form-control" id="inputEndsAt" required>
-            </div>
-            <button type="submit" class="btn btn-warning text-light text-uppercase float-end my-3 px-4 py-2" id="submit-new-listing">Submit</button>
-          </form>
+<form id="new-listing-form" novalidate>
+  <div class="mb-3">
+    <label for="inputTitle" class="form-label text-light">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputTitle"
+      name="title"
+      required
+      minlength="3"
+      maxlength="100"
+      title="Title must be between 3 and 100 characters"
+    >
+  </div>
+
+  <div class="mb-3">
+    <label for="inputDescription" class="form-label text-light">Description</label>
+    <textarea
+      id="inputDescription"
+      name="description"
+      class="form-control rounded"
+      style="width:100%; height:100px;"
+      required
+      minlength="10"
+      maxlength="1000"
+      title="Description must be between 10 and 1000 characters"
+    ></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="inputMedia1" class="form-label text-light">Media URLs</label>
+    <input
+      type="url"
+      class="form-control"
+      id="inputMedia1"
+      name="media1"
+      required
+      title="Please enter a valid URL (e.g., https://example.com/image.jpg)"
+    >
+  </div>
+
+  <div class="mb-3">
+    <input
+      type="url"
+      class="form-control"
+      id="inputMedia2"
+      name="media2"
+      placeholder="Optional Media URL"
+      title="Optional: Please enter a valid URL"
+    >
+  </div>
+
+  <div class="mb-3">
+    <input
+      type="url"
+      class="form-control"
+      id="inputMedia3"
+      name="media3"
+      placeholder="Optional Media URL"
+      title="Optional: Please enter a valid URL"
+    >
+  </div>
+
+  <div class="mb-3">
+    <label for="inputEndsAt" class="form-label text-light">Ends At</label>
+    <input
+      type="datetime-local"
+      class="form-control"
+      id="inputEndsAt"
+      name="endsAt"
+      required
+      title="Please select a future date and time"
+    >
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-warning text-light text-uppercase float-end my-3 px-4 py-2"
+    id="submit-new-listing"
+  >
+    Submit
+  </button>
+</form>
+
         </div>
       </div>
     </div>
