@@ -1,60 +1,66 @@
-# Semester Project 2
+# Auction House
 
-For this project we were tasked with launching an auction website where users can add items to be bid on and bid on items other users have put up for auction. When a user joins the website, they are given 1000 credits to use on the site. 
+![image](/auction-house.png)
 
-### The client has specified the following requirements in the form of User Stories:
-1. A user with a stud.noroff.no email may register
-2. A registered user may login
-3. A registered user may logout
-4. A registered user may update their avatar
-5. A registered user may view their total credit
-6. A registered user may create a listing with a title, deadline date, media gallery and description
-7. A registered user may add a bid to another user's listing
-8. A registered user may view Bids made on a listing
-9. An unregistered user may search through listings
+This project marks the culmination of three semesters of frontend development, aimed at creating a fully functional auction website. The goal was to deliver a responsive, user-focused platform where users can browse listings, place bids, and manage their profiles — all powered by the Noroff Auction API.
 
-### Technical restrictions:
-1. Must use an approved CSS Framework
-2. Must be hosted on an approved Static Host
-3. Must use an approved Design Application
-4. Must use an approved Planning Application
+## Description
 
-### The approved resources I have used for this project:
-- CSS processor: SASS/SCSS
-- CSS framework: Bootstrap
-- Hosting service: Netlify
-- Design application: Figma
-- Planning application: Trello
+The platform focuses on user interaction, real-time bidding, and secure access to key features, showcasing effective API integration and dynamic frontend functionality.
 
-### Auction House:
-- Login page (Landing page)
-2. A registered user may login
+- ### User Accounts and Credits:
+  - Registered users start with 1000 credits to bid.
+  - Guests can browse listings but must register to bid or create auctions.
+- ### Auction Functionality
+  - Users can create listings, place bids, and view credit balances.
+  - Live updates via API ensure accurate bid tracking and listing status.
+- ### Frontend Development
+  - Built with JavaScript and styled using Bootstrap for responsive design.
+  - Features include form validation, image upload, and profile management.
+- ### Project Tools and Deployment
+  - Designed in Figma, managed in Trello, and deployed via Netlify.
 
-- Register page
-1. A user with a stud.noroff.no email may register
+## Built With
 
-- Listings page
-3. A registered user may logout
-6. A registered user may create a listing with a title, deadline date, media gallery and description
-7. A registered user may add a bid to another user's listing
-8. A registered user may view Bids made on a listing
-9. An unregistered user may search through listings
+- [Bootstrap](https://getbootstrap.com)
 
-- Profile page
-3. A registered user may logout
-4. A registered user may update their avatar
-5. A registered user may view their total credit
+## Getting Started
 
-## Setup and run the project
+### Installing
 
-1. Clone the repository
-`git clone https://github.com/cecsun/semester-project-2.git`
+1. Clone the repo:
 
-2. `cd semester-project-2`
+```bash
+git clone https://github.com/cecsun/semester-project-2.git
+```
+```
+cd semester-project-2
+```
 
-3. `npm install` 
+2. Install the dependencies:
 
-4. Run the project locally
-`npm start`
+```
+npm install
+```
 
+### Running
 
+```bash
+npm run start
+```
+
+## Contributing
+
+Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+
+## Contact
+
+[My LinkedIn page](www.linkedin.com/in/cecilie-sunde)
+
+## License
+
+You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+
+## Acknowledgments
+
+This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
